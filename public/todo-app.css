@@ -1,0 +1,148 @@
+body {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #453c52;
+}
+
+.container {
+  margin: 40px 40px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+.todo-title {
+  font-size: 34px;
+  font-weight: normal;
+  letter-spacing: 0.25px;
+  line-height: 1.2;
+  color: #453c52;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.form-content {
+  margin-top: 30px;
+  display: flex;
+}
+
+input[type="text"] {
+  background: #ffffff;
+  border: 2px solid #bfb8cc;
+  border-radius: 4px;
+  font-size: 30px;
+}
+input[type="date"] {
+  border: 2px solid #bfb8cc;
+  border-radius: 4px;
+  font-size: 29px;
+  background: #ffffff url(./cal3.png) 96% 50% no-repeat;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+::-webkit-input-placeholder {
+  color: white;
+}
+input[type="button"] {
+  width: 80px;
+  height: 38px;
+  background: #48bb78;
+  border: 2px solid #48bb78;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+input::placeholder {
+  font-size: 20px;
+  color: #726a7e;
+  letter-spacing: 0.7px;
+  padding-left: 20px;
+}
+.date-holder {
+  margin-left: 15px;
+}
+
+.todo-content {
+  margin-top: 30px;
+}
+.sc-title {
+  display: flex;
+  padding-top: 26px;
+}
+
+.todos-list {
+  margin-left: 30px;
+}
+.todos-list div {
+  margin-top: 15px;
+}
+
+input[type="checkbox"] {
+  background-color: #ffffff;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+label {
+  font-size: 20px;
+  display: inline-block;
+}
+
+.task-count {
+  padding-left: 25px;
+  padding-top: 6px;
+  font-size: 18px;
+}
+
+.status {
+  margin-left: 20px;
+  font-size: 18px;
+  color: #c53030;
+  letter-spacing: 0.09px;
+}
+.special i {
+  padding: 10px 10px;
+}
+
+.special {
+  background: #f1edf7;
+  padding: 3px;
+  border-radius: 5px;
+  width: max-content;
+}
+
+.due-date {
+  opacity: 0.8;
+  padding-left: 8px;
+}
+
+/*responsive*/
+@media only screen and (max-width: 800px) {
+  .form-content {
+    display: block;
+  }
+
+  input {
+    margin-top: 10px;
+  }
+  input[type="text"] {
+    width: 70%;
+  }
+  input[type="date"] {
+    width: 70%;
+  }
+  .date-holder {
+    margin-left: 0px;
+  }
+}

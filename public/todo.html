@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Todo Apllication</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./todo-app.css" />
+    <script
+      src="https://kit.fontawesome.com/9303990607.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h2 class="todo-title">My To-do List</h2>
+        <form class="form-content" action="#">
+          <div class="text-holder">
+            <input type="text" placeholder="What's next?" />
+          </div>
+          <div class="date-holder">
+            <input type="date" placeholder="select" />
+          </div>
+          <div class="date-holder"><input type="button" value="Add" /></div>
+        </form>
+        <article class="todo-content">
+          <section class="single-content">
+            <div class="sc-title">
+              <h3>Due Today</h3>
+              <div class="task-count">0/4</div>
+            </div>
+            <div class="todos-list">
+              <div>
+                <input type="checkbox" name="todo" />
+                <label for="todo">RailsWorks</label>
+                <span class="status">Overdue</span>
+              </div>
+              <div class="special">
+                <input type="checkbox" name="todo" />
+                <label for="todo">React-Rails Works</label>
+                <i class="far fa-trash-alt"></i>
+              </div>
+            </div>
+          </section>
+          <section class="single-content">
+            <div class="sc-title">
+              <h3>Due Tomorrow</h3>
+              <div class="task-count">0/3</div>
+            </div>
+            <div class="todos-list">
+              <div>
+                <input type="checkbox" name="todo" />
+                <label for="todo">Ruby assignments</label>
+              </div>
+              <div>
+                <input type="checkbox" name="todo" />
+                <label for="todo">some </label>
+              </div>
+            </div>
+          </section>
+          <section class="single-content">
+            <div class="sc-title">
+              <h3>Remaining</h3>
+              <div class="task-count">0/4</div>
+            </div>
+            <div class="todos-list">
+              <div>
+                <input type="checkbox" name="todo" />
+                <label for="todo">Buy vegetables</label>
+                <span class="due-date">Mar 22</span>
+              </div>
+              <div>
+                <input type="checkbox" name="todo" />
+                <label for="todo">write something</label>
+                <span class="due-date">Mar 30</span>
+              </div>
+              <div>
+                <input type="checkbox" name="todo" />
+                <label for="todo">Math work</label>
+                <span class="due-date">Apr 6</span>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
