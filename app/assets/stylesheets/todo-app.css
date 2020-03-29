@@ -44,7 +44,7 @@ a {
   border-radius: 4px;
   font-size: 29px;
   font-family: sans-serif;
-  background: #ffffff url("cal3.png") 96% 50% no-repeat;
+  background: #ffffff url("cal3.png") 98% 50% no-repeat;
 }
 
 input[type="date"]::-webkit-inner-spin-button {
@@ -56,6 +56,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 ::-webkit-input-placeholder {
   color: white;
 }
+
 .btn-1 {
   background: #48bb78;
   border: 2px solid #48bb78;
@@ -66,6 +67,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 18px;
   letter-spacing: 1px;
 }
+
 input::placeholder {
   font-size: 25px;
   color: #726a7e;
