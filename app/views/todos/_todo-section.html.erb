@@ -1,0 +1,25 @@
+<section class="todo-section">
+  <div class="title-section">
+    <h3 class="due-title"><%=section_title%></h3>
+    <div class="task-count"><%=todos.completed.count%>/<%=todos.count%></div>
+  </div>
+  <div class="todos-list">
+    <%todos.each do |todo|%>
+    <div class="single-todo">
+      <% if todo.completed%>
+      <input type="checkbox" name="todo" class="todo-checkbox " checked />
+      <label for="todo" class="todo-item todo-complete">
+      <%=todo.todo_text%>
+      </label>
+      <%else%>
+      <input type="checkbox" name="todo" class="todo-checkbox" />
+      <label for="todo" class="todo-item "><%=todo.todo_text%> </label>
+      <%end%>
+      <%if show_duedate%>
+      <span class="due-date"><%=todo.due_date.to_s(:short)%></span>
+      <%end%>
+      <a href="#"><i class="far fa-trash-alt"></i></a>
+    </div>
+    <%end%>
+  </div>
+</section>

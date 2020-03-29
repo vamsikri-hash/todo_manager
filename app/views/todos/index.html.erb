@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="content">
+    <h2 class="todo-title">My To-do List</h2>
+    <form class="form-content" action="#">
+      <input type="text"class="text-holder" placeholder="What's next?" />
+      <input type="date" class="date-holder" placeholder="select" />
+      <input type="button" class="btn-1" value="Add" />
+    </form>
+    <article class="todo-content">
+      <%= render partial: "todo-section", locals: {section_title: "Overdue",todos: Todo.overdue.incomplete,show_duedate: true}%>
+      <%= render partial: "todo-section", locals: {section_title: "Due Today",todos: Todo.duetoday,show_duedate: false}%>
+      <%= render partial: "todo-section", locals: {section_title: "Due Later",todos: Todo.duelater, show_duedate: true}%>
+    </article>
+  </div>
+</div>
