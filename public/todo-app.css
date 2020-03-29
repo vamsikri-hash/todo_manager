@@ -38,7 +38,7 @@ input[type="date"] {
   border: 2px solid #bfb8cc;
   border-radius: 4px;
   font-size: 29px;
-  background: #ffffff url(./cal3.png) 96% 50% no-repeat;
+  background: #ffffff url("../app/assets/images/cal3.png") 96% 50% no-repeat;
 }
 
 input[type="date"]::-webkit-inner-spin-button {
