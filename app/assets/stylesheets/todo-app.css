@@ -1,0 +1,172 @@
+body {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #453c52;
+}
+a {
+  color: #30263f;
+}
+
+.container {
+  margin: 40px 40px;
+}
+.content {
+  width: 150%;
+}
+
+.todo-title {
+  font-size: 34px;
+  font-weight: normal;
+  letter-spacing: 0.25px;
+  line-height: 1.2;
+  color: #453c52;
+  font-weight: 600;
+}
+
+.form-content {
+  margin-top: 30px;
+  display: flex;
+}
+
+.text-holder {
+  background: #ffffff;
+  border: 2px solid #bfb8cc;
+  border-radius: 4px;
+  font-size: 30px;
+  padding: 5px 10px;
+}
+.date-holder {
+  border: 2px solid #bfb8cc;
+  padding: 5px;
+  margin-left: 15px;
+  margin-right: 10px;
+  border-radius: 4px;
+  font-size: 29px;
+  font-family: sans-serif;
+  background: #ffffff url(./cal3.png) 96% 50% no-repeat;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+::-webkit-input-placeholder {
+  color: white;
+}
+.btn-1 {
+  background: #48bb78;
+  border: 2px solid #48bb78;
+  padding: 4px 20px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+input::placeholder {
+  font-size: 25px;
+  color: #726a7e;
+  letter-spacing: 2px;
+  padding-left: 20px;
+}
+
+.todo-content {
+  margin-top: 30px;
+}
+.title-section {
+  display: flex;
+  padding-top: 26px;
+  align-items: center;
+}
+
+.due-title {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.todos-list {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.single-todo {
+  display: flex;
+  padding: 2px 8px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+.single-todo a {
+  margin-left: 20px;
+  visibility: hidden;
+}
+
+.todo-checkbox {
+  background-color: #ffffff;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+.todo-item {
+  font-size: 20px;
+}
+
+.task-count {
+  padding-left: 25px;
+  padding-top: 6px;
+  font-size: 18px;
+}
+
+.status {
+  margin-left: 20px;
+  font-size: 18px;
+  color: #c53030;
+  letter-spacing: 0.09px;
+}
+.special i {
+  padding: 10px 10px;
+}
+
+.single-todo:hover {
+  background: #f1edf7;
+  border-radius: 5px;
+}
+.single-todo:hover a {
+  visibility: visible;
+}
+
+.due-date {
+  opacity: 0.8;
+  padding-left: 12px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.todo-complete {
+  text-decoration: line-through;
+}
+t {
+  fill: aqua;
+}
+
+/*responsive*/
+@media only screen and (max-width: 800px) {
+  .form-content {
+    display: block;
+  }
+
+  input {
+    margin-top: 10px;
+  }
+  .text-holder {
+    width: 70%;
+  }
+
+  .date-holder {
+    margin-left: 0px;
+    width: 70%;
+  }
+}
