@@ -44,7 +44,7 @@ a {
   border-radius: 4px;
   font-size: 29px;
   font-family: sans-serif;
-  background: #ffffff url(./cal3.png) 96% 50% no-repeat;
+  background: #ffffff url("cal3.png") 96% 50% no-repeat;
 }
 
 input[type="date"]::-webkit-inner-spin-button {
@@ -103,15 +103,19 @@ input::placeholder {
 }
 
 .todo-checkbox {
-  background-color: #ffffff;
-  border: 1px solid #bfb8cc;
-  border-radius: 4px;
   width: 20px;
   height: 20px;
+  border: 1px solid #34495e;
+  border-radius: 4px;
+  outline: none;
+  transition-duration: 0.3s;
+  background-color: white;
+  cursor: pointer;
 }
 
 .todo-item {
   font-size: 20px;
+  padding-left: 7px;
 }
 
 .task-count {
@@ -133,6 +137,7 @@ input::placeholder {
 .single-todo:hover {
   background: #f1edf7;
   border-radius: 5px;
+  width: max-content;
 }
 .single-todo:hover a {
   visibility: visible;
