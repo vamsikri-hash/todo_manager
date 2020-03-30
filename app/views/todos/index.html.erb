@@ -9,7 +9,7 @@
     <article class="todo-content">
       <%= render partial: "todo-section", locals: {
         section_title: "Overdue",
-        todos: Todo.overdue.incomplete,
+        todos: Todo.overdue,
         show_duedate: true
       } %>
       <%= render partial: "todo-section", locals: {
