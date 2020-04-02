@@ -21,7 +21,11 @@
     <%if show_duedate%>
       <span class="due-date"><%=todo.due_date.to_s(:short)%></span>
     <%end%>
-    <a href="#"><i class="far fa-trash-alt"></i></a>
+    <a href="javasrcipt:void(0)">
+    <%= form_with(url: "/todos/#{todo.id}", method: "delete") do%>
+     <input type="image" src="<%=asset_url("delete.png")%>" alt="delete">
+    <%end%>
+    </a>
     </div>
     <%end%>
   </div>
