@@ -19,7 +19,7 @@ class TodosController < ApplicationController
 
   def update
     id = params[:id]
-    completed = params[:completed]
+    completed = params[:completed].nil? ? false : true
     todo = Todo.update(id, completed: completed)
     redirect_to todos_path
   end
