@@ -7,23 +7,23 @@
     <%todos.each do |todo|%>
     <div class="single-todo">
     <%= form_with(url: "/todos/#{todo.id}", method: "put") do%>
-      <input
-        type="checkbox"
-        name="completed"
-        class="todo-checkbox "
-        onclick="this.form.submit()"
-        <%= todo.completed ? "checked" : ""%>
-      />
+      <%= check_box_tag 'completed',
+          'todo',
+          todo.completed,
+          class: 'todo-checkbox',
+          onclick: 'this.form.submit()'
+       %>
     <%end%>
-    <label for="todo" class="todo-item <%= todo.completed ? "todo-complete" : ""%> ">
-      <%=todo.todo_text%>
-    </label>
+    <%= label_tag todo.todo_text,
+        nil,
+        class: "todo-item #{todo.completed ? "todo-complete" : ""}"
+      %>
     <%if show_duedate%>
       <span class="due-date"><%=todo.due_date.to_s(:short)%></span>
     <%end%>
     <a href="javasrcipt:void(0)">
     <%= form_with(url: "/todos/#{todo.id}", method: "delete") do%>
-     <input type="image" src="<%=asset_url("delete.png")%>" alt="delete">
+    <%= image_submit_tag "delete.png", alt: "delete todo" %>
     <%end%>
     </a>
     </div>

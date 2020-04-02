@@ -1,11 +1,11 @@
 <div class="container">
   <div class="content">
     <h2 class="todo-title">My To-do List</h2>
-    <form class="form-content" action="/todos" method="POST">
-      <input type="text"class="text-holder" name="todo_text" placeholder="What's next?" />
-      <input type="date" class="date-holder" name="due_date" placeholder="select" />
-      <input type="submit" class="btn-1" value="Add" />
-    </form>
+    <%= form_with(url: "/todos",method: "post",class: "form-content" ) do%>
+     <%= text_field_tag 'todo_text',nil,placeholder: 'Whats next?',class: 'text-holder' %>
+     <%= date_field_tag 'due_date',nil,class: 'date-holder'%>
+     <%= submit_tag 'Add', class: 'btn-1'%>
+    <%end%>
     <article class="todo-content">
       <%= render partial: "todo-section", locals: {
         section_title: "Overdue",
