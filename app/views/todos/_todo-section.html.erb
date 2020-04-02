@@ -6,19 +6,22 @@
   <div class="todos-list">
     <%todos.each do |todo|%>
     <div class="single-todo">
-      <% if todo.completed%>
-      <input type="checkbox" name="todo" class="todo-checkbox " checked />
-      <label for="todo" class="todo-item todo-complete">
+    <%= form_with(url: "/todos/#{todo.id}", method: "put") do%>
+      <input
+        type="checkbox"
+        name="completed"
+        class="todo-checkbox "
+        onclick="this.form.submit()"
+        <%= todo.completed ? "checked" : ""%>
+      />
+    <%end%>
+    <label for="todo" class="todo-item <%= todo.completed ? "todo-complete" : ""%> ">
       <%=todo.todo_text%>
-      </label>
-      <%else%>
-      <input type="checkbox" name="todo" class="todo-checkbox" />
-      <label for="todo" class="todo-item "><%=todo.todo_text%> </label>
-      <%end%>
-      <%if show_duedate%>
+    </label>
+    <%if show_duedate%>
       <span class="due-date"><%=todo.due_date.to_s(:short)%></span>
-      <%end%>
-      <a href="#"><i class="far fa-trash-alt"></i></a>
+    <%end%>
+    <a href="#"><i class="far fa-trash-alt"></i></a>
     </div>
     <%end%>
   </div>
