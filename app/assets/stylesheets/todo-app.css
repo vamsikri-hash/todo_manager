@@ -157,9 +157,6 @@ input::placeholder {
 .todo-complete {
   text-decoration: line-through;
 }
-t {
-  fill: aqua;
-}
 
 /*responsive*/
 @media only screen and (max-width: 800px) {
