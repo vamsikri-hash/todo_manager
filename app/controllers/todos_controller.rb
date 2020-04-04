@@ -1,5 +1,4 @@
 class TodosController < ApplicationController
-
   def index
     render "index"
   end
@@ -19,6 +18,7 @@ class TodosController < ApplicationController
   def update
     id = params[:id]
     completed = params[:completed].nil? ? false : true
+    # double bang operator is an aletrnative !!completed
     todo = Todo.update(id, completed: completed)
     redirect_to todos_path
   end
