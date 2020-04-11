@@ -4,29 +4,21 @@
     <div class="task-count"><%=todos.completed.count%>/<%=todos.count%></div>
   </div>
   <div class="todos-list">
-    <%todos.each do |todo|%>
-    <div class="single-todo">
-    <%= form_with(url: "/todos/#{todo.id}", method: "put") do%>
-      <%= check_box_tag 'completed',
-          'todo',
-          todo.completed,
-          class: 'todo-checkbox',
-          onclick: 'this.form.submit()'
-        %>
-    <%end%>
-    <%= label_tag todo.todo_text,
-        nil,
-        class: "todo-item #{todo.completed ? "todo-complete" : ""}"
-      %>
-    <%if show_duedate%>
-      <span class="due-date"><%=todo.due_date.to_s(:short)%></span>
-    <%end%>
-    <a href="javasrcipt:void(0)">
-    <%= form_with(url: "/todos/#{todo.id}", method: "delete") do%>
-    <%= image_submit_tag "delete.png", alt: "delete todo" %>
-    <%end%>
-    </a>
-    </div>
-    <%end%>
+    <% todos.each do |todo| %>
+        <div class="single-todo">
+          <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
+            <%= check_box_tag 'completed','todo',todo.completed,class: 'todo-checkbox',onclick: 'this.form.submit()' %>
+          <% end %>
+          <%= label_tag todo.todo_text,nil,class: "todo-item #{todo.completed ? "todo-complete" : ""}" %>
+          <% if show_duedate %>
+            <span class="due-date"><%=todo.due_date.to_s(:short)%></span>
+          <% end %>
+          <a href="javasrcipt:void(0)">
+            <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
+              <%= image_submit_tag "delete.png", alt: "delete todo" %>
+            <% end %>
+          </a>
+        </div>
+    <% end %>
   </div>
 </section>
