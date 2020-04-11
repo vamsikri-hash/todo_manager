@@ -1,0 +1,31 @@
+.signup-section {
+  margin-top: 80px;
+}
+
+.form-title {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.form-label {
+  font-size: 20px;
+}
+
+.input-item {
+  font-size: 20px;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.form-element {
+  margin-top: 20px;
+}
+
+.form-button {
+  background: #48bb78;
+  border: 2px solid #48bb78;
+  padding: 10px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+}
