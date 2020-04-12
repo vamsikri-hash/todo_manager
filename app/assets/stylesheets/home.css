@@ -4,6 +4,8 @@
   font-size: 20px;
   padding: 20px;
   background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
 }
 
 .home-title {
