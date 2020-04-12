@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   root to: "home#index"
   resources :todos
   resources :users
+  get "/signin" => "sessions#new"
+  post "/signin" => "sessions#create"
+  resources :sessions
 end
