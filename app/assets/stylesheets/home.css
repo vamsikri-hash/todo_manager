@@ -1,11 +1,11 @@
 .user-header {
-  margin-left: 40px;
   margin-top: 80px;
   font-size: 20px;
   padding: 20px;
-  background-color: aliceblue;
+  background-color: #d2dae2;
   display: flex;
   justify-content: space-between;
+  color: #1e272e;
 }
 
 .home-title {
@@ -16,4 +16,23 @@
 .user-authenticate {
   font-size: 26px;
   margin-bottom: 20px;
+}
+
+/** styles for flash messages **/
+.alert {
+  margin-top: 50px;
+  font-size: 20px;
+  padding: 15px;
+  padding-left: 40px;
+  border-radius: 5px;
+}
+
+.alert-alert {
+  background-color: #ff5e57;
+  color: white;
+}
+
+.alert-notice {
+  background-color: #4bcffa;
+  color: white;
 }

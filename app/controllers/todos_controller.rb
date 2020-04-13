@@ -10,11 +10,16 @@ class TodosController < ApplicationController
   end
 
   def create
-    Todo.create!(todo_text: params[:todo_text],
-                 due_date: params[:due_date],
-                 completed: false,
-                 user_id: current_user.id)
-    redirect_to todos_path
+    @todo = Todo.new(todo_text: params[:todo_text],
+                     due_date: params[:due_date],
+                     completed: false,
+                     user_id: current_user.id)
+    if @todo.save
+      redirect_to todos_path
+    else
+      flash[:alert] = @todo.errors.full_messages[0]
+      redirect_to todos_path
+    end
   end
 
   def update

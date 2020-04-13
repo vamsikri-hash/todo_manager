@@ -3,6 +3,7 @@ class HomeController < ApplicationController
 
   def index
     if current_user
+      flash[:notice] = "You have already signed in.."
       redirect_to todos_path
     else
       render "index"

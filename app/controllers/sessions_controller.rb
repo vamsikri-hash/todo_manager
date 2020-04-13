@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
 
   def new
     if current_user
+      flash[:notice] = "You have already signed in, Signout and signin to other account"
       redirect_to todos_path
     else
       render "new"
@@ -16,7 +17,8 @@ class SessionsController < ApplicationController
       session[:current_user_id] = user.id
       redirect_to todos_path
     else
-      render plain: "Incorrect password"
+      flash[:alert] = "Incorrect email or password, please try again!"
+      redirect_to new_session_path
     end
   end
 

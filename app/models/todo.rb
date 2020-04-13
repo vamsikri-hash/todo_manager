@@ -5,4 +5,7 @@ class Todo < ActiveRecord::Base
   scope :duetoday, -> { where("due_date = ?", Date.today) }
   scope :duelater, -> { where("due_date > ?", Date.today) }
   scope :completed, -> { where(completed: true) }
+
+  validates :todo_text, presence: true, length: { minimum: 2 }
+  validates :due_date, presence: true
 end
