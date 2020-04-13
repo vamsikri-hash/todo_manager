@@ -3,14 +3,14 @@
   <%= form_with url: sessions_path , method: "post" , class: "user-from" do %>
     <div class="form-element">
       <p class="form-label">Email :</p>
-      <%= email_field_tag "email",nil,class: "input-item"%>
+      <%= email_field_tag "email",nil,class: "input-item" %>
     </div>
     <div class="form-element">
       <p class="form-label">Password :</p>
-      <%= password_field_tag "password",nil,class: "input-item"%>
+      <%= password_field_tag "password",nil,class: "input-item" %>
     </div>
     <div class="form-element">
-      <%= submit_tag "SignIn!", class: "form-button"%>
+      <%= submit_tag "SignIn!", class: "form-button" %>
     </div>
   <% end %>
 </section>

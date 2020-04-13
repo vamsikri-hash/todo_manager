@@ -1,7 +1,7 @@
 <section class="todo-section">
   <div class="title-section">
-    <h3 class="due-title"><%=section_title%></h3>
-    <div class="task-count"><%=todos.completed.count%>/<%=todos.count%></div>
+    <h3 class="due-title"><%= section_title %></h3>
+    <div class="task-count"><%= todos.completed.count %>/<%= todos.count %></div>
   </div>
   <div class="todos-list">
     <% todos.each do |todo| %>
@@ -11,7 +11,7 @@
           <% end %>
           <%= label_tag todo.todo_text,nil,class: "todo-item #{todo.completed ? "todo-complete" : ""}" %>
           <% if show_duedate %>
-            <span class="due-date"><%=todo.due_date.to_s(:short)%></span>
+            <span class="due-date"><%= todo.due_date.to_s(:short) %></span>
           <% end %>
           <a href="javasrcipt:void(0)">
             <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>

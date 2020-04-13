@@ -9,11 +9,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-  <%= render "layouts/flash_messages"%>
+  <%= render "layouts/flash_messages" %>
   <% if @current_user %>
     <p class="user-header">
       Welcome <%= @current_user.first_name %>
-      <%= link_to "Sign-out", destroy_session_path, method: "delete"%>
+      <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
     </p>
   <% end %>
   <%= yield %>

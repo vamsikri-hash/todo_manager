@@ -36,3 +36,8 @@
   background-color: #9dd1e7;
   color: #222f3e;
 }
+
+.alert-success {
+  background-color: rgb(140, 209, 186);
+  color: #222f3e;
+}
